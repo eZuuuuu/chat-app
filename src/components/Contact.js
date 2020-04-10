@@ -2,18 +2,15 @@ import React from 'react';
 import './Contact.css';
 
 
-function Contact() {
+function Contact(props) {
     return (
       <figure className="Contact">
-        <img className="avatar"
-          src="https://randomuser.me/api/portraits/men/45.jpg"
-          alt="Jorge Cole"
-        />
+        <img className="avatar" src={props.avatar} alt={props.name}/>
         <div>
-        <name className="name">Jorge Cole</name>
+        <div className="name">{props.name}</div>
         <div className="status">
-        <button class="status-online"></button>
-        <a>online</a>
+        <div className={props.good ? 'status-online' : 'status-offline'}></div>
+        <var>{props.texte}</var>
         </div>
         </div>
       </figure>
