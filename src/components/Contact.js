@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function Contact(props) {
     return (
       <figure className="Contact">
-        <img className="avatar" src={props.avatar}/>
+        <img className="avatar" src={props.avatar} alt={props.name}/>
         <div>
         <div className="name">{props.name}</div>
         <div className="status">
